@@ -77,8 +77,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-    marginRight: 10,
-  },
-});
 
-export default App;
+
