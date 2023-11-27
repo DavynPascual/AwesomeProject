@@ -3,14 +3,14 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Task from './Task';
 
-const ToDoList = () => {
+const ToDoList = ({ tasks }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>To-Do List</Text>
       <ScrollView style={styles.scrollView}>
-        <Task text="Walk the dog" />
-        <Task text="Do laundry" />
-        <Task text="Go to the gym" />
+        {tasks.map((task, index) => (
+          <Task key={index} text={task} />
+        ))}
       </ScrollView>
     </View>
   );
