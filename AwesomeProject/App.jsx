@@ -15,16 +15,16 @@ function App() {
         { id: 2, title: 'Go to gym', completed: false },
         { id: 3, title: 'Walk dog', completed: true },
     ]);
-
-    const handleAddTask = (newTask) => {
+    const addTask = (taskText) => {
         const newTaskObject = {
             id: tasks.length + 1,
-            title: newTask.trim(),
+            title: taskText.trim(),
             completed: false,
         };
 
         setTasks([...tasks, newTaskObject]);
     };
+
 
     const handleToggleTask = (id) => {
         const updatedTasks = tasks.map((task) => {
@@ -43,7 +43,7 @@ function App() {
             <ScrollView>
                 <ToDoList tasks={tasks} handleToggleTask={handleToggleTask} />
             </ScrollView>
-            <ToDoForm handleAddTask={handleAddTask} />
+            <ToDoForm addTask={addTask} />
         </SafeAreaView>
     );
 }
