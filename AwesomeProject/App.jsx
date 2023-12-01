@@ -6,8 +6,8 @@ import {
     ScrollView,
 } from 'react-native';
 
-import ToDoList from './components/ToDoList';
-import ToDoForm from './components/ToDoForm';
+import ToDoList from './Components/ToDoList';
+import ToDoForm from './Components/ToDoForm';
 
 function App() {
     const [tasks, setTasks] = React.useState([
